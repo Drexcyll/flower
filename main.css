@@ -1,0 +1,881 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/* Add this to your main.css file */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 165vh;
+}
+
+.checkout-page {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+:root {
+    --white-alpha-40: rgba(255, 255, 255, 0.40);
+    --white-alpha-25: rgba(255, 255, 255, 0.25);
+    --backdrop-filter-blur: blur(5px);
+    --pink: #e84393;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.message {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 20px;
+    background: var(--pink);
+    color:#ddd;
+    width: 50vw;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.message i {
+    cursor: pointer;
+    float: right;
+}
+a {
+    text-decoration: none;
+}
+.form-container {
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.form-container form {
+    width: 50vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter-blur);
+}
+form input, textarea {
+    width: 100%;
+    background: var(--white-alpha-25);
+    padding: .7rem 1.4rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: .5rem 0;
+    padding-left: .5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+}
+form .btn {
+    cursor: pointer;
+    background: var(--pink);
+    color: #ddd;
+    text-transform: uppercase;
+}
+form .btn:hover {
+    background: transparent;
+    border: 2px solid var(--pink);
+    color: #ddd;
+}
+.form-container h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin: 1rem;
+}
+.btn2{
+    color: var(--pink);
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid var(--pink);
+    padding: .5rem 2rem;
+}
+.btn2:hover{
+    background: var(--pink);
+    color:#ddd;
+}
+/*--------admin header---------*/
+header {
+    background:#ddd;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    z-index: 1000;
+}
+.flex {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--pink);
+}
+.navbar a:hover, .header .icons i:hover {
+    margin-left: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--pink);
+}
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: var(--pink);
+    text-transform: uppercase;
+}
+.header .icons {
+    display: flex;
+}
+.header .icons i {
+    margin-left: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--pink);
+}
+
+.header .user-box {
+    position: absolute;
+    top: 150%;
+    right: -10%;
+    width: 18rem;
+    padding: .7rem 1rem;
+    background: #ddd;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: var(--pink);
+    font-size: 5px;
+    display: none;
+    transition: .5s;
+}
+.header .user-box.active {
+    display: block;
+}
+.header .user-box span {
+    text-transform: capitalize;
+    color: var(--pink);
+    font-size: 14px;
+}
+.logout-btn {
+    background: #ddd;
+    width: 14rem;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    color: var(--pink);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    color: var(--pink);
+}
+.box-container {
+    padding: 2% 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+.box-container .box {
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    background: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    margin: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+.box-container .box h3 {
+    font-size: 3rem;
+    color:  var(--pink)
+}
+.box-container .box p {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 1rem;
+}
+/*---------add product page------------*/
+.add-products form{
+    width: 50vw;
+    margin: 2rem auto;
+    background: #ddd;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.add-products form label{
+    text-transform: capitalize;
+    color: var(--backdrop-filter-blur);
+}
+.add-products form textarea{
+    height: 200px;
+}
+.product-list {
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
+}
+
+.product-list table th,
+.product-list table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.product-list table th {
+    background-color: #ddd;
+    color: var(--pink);
+}
+
+.product-list table img {
+    max-width: 50px;
+    height: auto;
+}
+
+.btn-delete, .btn-edit {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+}
+
+.btn-delete {
+    background-color: var(--pink);
+    color:#ddd;
+}
+
+.btn-edit {
+    background-color: var(--pink);
+    color:#ddd;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ddd;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid#ddd;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: var(--box-shadow);
+}
+
+.btn-close {
+    background-color:var(--pink);
+    color: #ddd;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+}
+/*---------order container------------*/
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.message {
+    background-color:var(--pink);
+    color:#ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.message .close-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ddd;
+}
+
+.order-container {
+    background-color:#ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-container h1 {
+    font-size: 24px;
+    color: var(--pink);
+    margin-bottom: 20px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    background-color:  var(--pink);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.box p {
+    margin: 5px 0;
+}
+
+.btn {
+    background-color: var(--pink);
+    color: #ddd;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--pink);
+}
+
+.delete {
+    color: var(--pink);
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.delete:hover {
+    text-decoration: underline;
+}
+/*---------footer------------*/
+.home-contact{
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('image/bckgrd.avif.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+.home-contact h1{
+    text-transform: uppercase;
+    margin: 1rem;
+    color: var(--pink);
+}
+.footer{
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.footer .inner-footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+.footer .inner-footer .card{
+    margin: .5rem 0;
+}
+.footer .inner-footer .card h3{
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+    position: relative;
+}
+.footer .inner-footer .card h3::before{
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 2px;
+    background: var(--pink);
+    bottom: 0;
+    left: 0;
+}
+.footer .inner-footer .card h3::after{
+    position: absolute;
+    content: '';
+    width: 10%;
+    height: 5px;
+    background: rgb(26, 24, 19);
+    bottom: 0;
+    right: 40%;
+}
+.footer .inner-footer .card li{
+    cursor: pointer;
+    line-height: 1.5;
+    color: gray;
+}
+.footer .inner-footer .card li:nth-child(1){
+    margin-top: 1rem;
+}
+
+.footer .inner-footer .card li:hover{
+    color: var(--pink);
+}
+.footer .inner-footer .card .social-links{
+    margin-top: 1rem;
+}
+.footer .inner-footer .card .social-links i{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid var(--pink);
+    color: var(--pink);
+    padding: .6rem;
+    margin: .3rem 0;
+    border-radius: 50%;
+}
+.footer .inner-footer .card .social-links i:hover{
+    background: var(--pink);
+    color:#ddd;
+}
+.bottom-footer{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--pink);
+    border: 1px solid #ddd;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}   
+.row .card{
+    background-image: url(image/banner1.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin-bottom: 2rem;;
+}
+.row .card .detail{
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+}
+.row .card h1{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.row .card a{
+    color: var(--pink);
+    font-size: 19px;
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--pink);
+    text-transform: uppercase;
+}
+.row .card a:hover{
+    background: var(--pink);
+    color:#ddd;
+}
+.row .card:nth-child(1){
+    background-image: url(image/banner1.1.jpg);
+}
+.row .card:nth-child(2){
+    background-image: url(image/banner\ 2.2.jpeg);
+}
+.row .card:nth-child(3){
+    background-image: url(image/banner3.3.jpg);
+}
+.checkout-page {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input[readonly],
+.form-group textarea[readonly] {
+    background-color: #ddd;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--pink);
+    border: none;
+    border-radius: 4px;
+    color: #ddd;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+/*---------media screen-----------*/
+.shop .box{
+    position: relative;
+}
+.price{
+    font-size: 18px;
+}
+.name{
+    font-size: 20px;
+    color: var(--pink);
+    margin: .5rem;
+    text-transform: capitalize;
+}
+.shop .icon{
+    position: absolute;
+    right: 3%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white-alpha-40);
+    visibility: hidden;
+}
+.shop .box:hover .icon{
+    visibility: hidden;
+}
+.shop .icon a,
+.shop .icon button{
+    margin: .2rem 0;
+    padding: .3rem;
+    border: 1px solid#ddd;
+    color: gray;
+}
+.shop img{
+    width: 100%;
+}
+.shop .more{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    margin: .5rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+}
+.shop .more a{
+    margin-bottom: -.6rem;
+    color: gray;
+    text-transform: capitalize;
+}
+.shop .more a:hover{
+    color: var(--pink);
+}
+.shop .more:hover{
+    border: 1px solid var(--pink);
+    color: var(--pink);
+}
+.cart-button {
+    background-color: var(--pink); /* Bootstrap primary color */
+    color: #ddd;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-button:hover {
+    background-color:var(--pink); /* Darker shade of blue */
+}
+.view_page{
+    padding: 5% 8%;
+}
+.view_page form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view_page form img{
+    width: 50%;
+}
+.view_page form .name{
+    font-size: 4rem;
+    color: var(--pink);
+}
+.view_page form .detail,
+.view_page form .price{
+    font-size: 18px;
+    color: gray;
+    line-height: 2;
+}
+.view_page form .price{
+    font-size: 24px;
+}
+.view_page form .quantity{
+    width: 60%;
+    box-shadow: none;
+    border: 1px solid var(--pink);
+    border-radius: 0;
+    margin: 1rem;
+}
+.view_page button{
+    background: var(--pink);
+    color: #ddd; 
+    margin-top: 1rem;
+    padding: .8rem;   
+}
+.view_page .box {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.view_page .box img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.view_page .box .detail {
+    padding: 1rem 0;
+}
+.view_page .box .price {
+    font-size: 30px;
+    color: var(--pink);
+}
+.view_page .box .name {
+    font-size: 25px;
+    color: #333;
+    padding-top: 1rem;
+}
+.view_page .box .product-detail {
+    padding-top: 1rem;
+    font-size: 18px;
+    color: #666;
+}
+.view_page .box .icon button {
+    font-size: 30px;
+    color: var(--pink);
+    cursor: pointer;
+}
+.view_page .box .quantity {
+    width: 100px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 20px;
+    padding: .5rem 1.5rem;
+    height: 40px;
+}
+.cart-button {
+    background:var(--pink);
+    color: #ddd;
+    padding: .5rem 2rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cart-button:hover {
+    background: var(--pink);
+}
+.cart {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 0;
+}
+.cart h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--pink);
+}
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.cart-item .details {
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+.cart-item .details .name {
+    font-size: 1.2rem;
+    color: #333;
+}
+.cart-item .details .price {
+    color: var(--pink);
+    font-size: 1rem;
+    margin-top: .5rem;
+}
+.cart-item .details .quantity {
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: #666;
+}
+.btn-delete {
+    background: var(--pink);
+    color: #ddd;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-delete:hover {
+    background: var(--pink);
+}
+.checkout-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: var(--pink);
+    color:#ddd;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+/* CSS for the delete button */
+.delete-button {
+    background-color: var(--pink); /* Red background */
+    color:#ddd; /* White text */
+    border: none; /* No border */
+    padding: 8px 12px; /* Padding */
+    cursor: pointer; /* Cursor style */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.delete-button:hover {
+    background-color: var(--white-alpha-25); /* Darker red background on hover */
+}
+
+.checkout-button:hover {
+    background: var(--pink);
+}
+.empty {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/*---------media screen-----------*/
+@media (max-width: 991px) {
+    #menu-btn {
+        display: block;
+    }
+    .header .flex {
+        position: absolute;
+        top: 149%;
+        left: 0;
+        right: 0;
+        border-top: 1px solid var(--pink);
+        background: #ddd;
+        transition: .3s ease;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
